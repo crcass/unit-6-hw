@@ -1,18 +1,32 @@
 
 button {
-	margin: 0.5rem;
+	margin: 0.25rem;
 }
 
 .card {
-	width: 18rem;
+  margin-top: 1rem;
+}
+
+.card, button {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:hover {
+  background-color: rgba(0,0,0,.05);
 }
 
 img {
 	width: 100%;
+  cursor: pointer;
+}
+
+#add-gifs {
+  visibility: hidden;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 footer {
-  background-color: rgba(64, 64, 64, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +35,6 @@ footer {
   width: 100%;
   height: 2rem;
   font-size: 0.75rem;
-  text-shadow: none;
 }
 
 footer span {
