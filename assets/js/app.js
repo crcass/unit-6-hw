@@ -1,4 +1,3 @@
-
 // set names buttons that will always display on load
 let topics = [
    'batman',
@@ -35,7 +34,7 @@ let renderButtons = (() => {
 
 $(document).ready(() => {
 
-// lets the user add another search button
+   // lets the user add another search button
    $('#add-btn').on('click', (e) => {
       e.preventDefault();
       let newHero = $('#add-hero').val().trim();
@@ -48,7 +47,7 @@ $(document).ready(() => {
 
    });
 
-// initial gif function - displays 10 gifs after GIPHY API call finishes
+   // initial gif function - displays 10 gifs after GIPHY API call finishes
    function displayGifs() {
       $('#gif-display').empty();
       $('#gif-title').css('visibility', 'visible');
@@ -83,7 +82,7 @@ $(document).ready(() => {
             currentGifs.push(results[i].id);
          }
 
-// add button to load more gifs
+         // add button to load more gifs
          let moreGifBtn = $('<button>');
          moreGifBtn.attr('class', 'btn btn-primary btn-lg btn-block');
          moreGifBtn.attr('id', 'add-gifs');
@@ -93,7 +92,7 @@ $(document).ready(() => {
       });
    };
 
-// adds more gifs to the page after GIPHY API call finishes and deletes add-gif button
+   // adds more gifs to the page after GIPHY API call finishes and deletes add-gif button
    function addGifs() {
       let hero = $(this).attr('hero-name');
       gifLimit += 10;;
@@ -129,7 +128,7 @@ $(document).ready(() => {
             }
          }
 
-// adds button back to the end of the gif column
+         // adds button back to the end of the gif column
          let moreGifBtn = $('<button>');
          moreGifBtn.attr('class', 'btn btn-primary btn-lg btn-block');
          moreGifBtn.attr('id', 'add-gifs');
@@ -139,7 +138,7 @@ $(document).ready(() => {
       });
    };
 
-// allows gifs to animate/stop on click
+   // allows gifs to animate/stop on click
    function animateGifs() {
       let state = $(this).attr('data-state');
       if (state === 'still') {
@@ -150,7 +149,7 @@ $(document).ready(() => {
       }
    };
 
-// displays poster & title for movies that correspond to selected hero
+   // displays poster & title for movies that correspond to selected hero
    function displayMovies() {
       $('#mov-display').empty();
       $('#mov-title').css('visibility', 'visible');
@@ -219,7 +218,7 @@ $(document).ready(() => {
       });
    }
 
-// click handlers for the page
+   // click handlers for the page
    $(document).on('click', '.hero-btn', displayGifs);
 
    $(document).on('click', '.hero-btn', displayMovies);
