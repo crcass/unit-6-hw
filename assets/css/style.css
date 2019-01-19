@@ -3,6 +3,10 @@ button {
 	margin: 0.25rem;
 }
 
+.row {
+  margin-bottom: 4rem;
+}
+
 .card {
   margin-top: 1rem;
 }
@@ -17,11 +21,17 @@ button {
 
 img {
 	width: 100%;
+}
+
+.gif {
   cursor: pointer;
 }
 
-#add-gifs {
+#gif-title, #mov-title, #bio-title {
   visibility: hidden;
+}
+
+#add-gifs {
   margin-top: 2rem;
   margin-bottom: 4rem;
 }
