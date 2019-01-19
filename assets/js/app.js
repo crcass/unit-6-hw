@@ -156,7 +156,7 @@ $(document).ready(() => {
       $('#mov-title').css('visibility', 'visible');
       let hero = $(this).attr('hero-name');
 
-      let queryURL = `http://www.omdbapi.com/?apikey=trilogy&s=${hero}`;
+      let queryURL = `https://www.omdbapi.com/?apikey=trilogy&s=${hero}`;
       $.ajax(queryURL).then((response) => {
          let results = response.Search;
 
